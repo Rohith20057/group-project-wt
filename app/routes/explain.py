@@ -1,10 +1,10 @@
 from fastapi import APIRouter, HTTPException
-from app.models.schemas import CodeRequest, CodeResponse
+from app.models.schemas import CodeRequest, CodeResponse, UserRegister, UserLogin
 from app.services.analyzer import analyze_code
 from app.database.connection import explanations_collection
-from datetime import datetime
-from database.connection import users_collection
-
+from datetime import datetime, timezone
+from app.database.connection import users_collection
+from fastapi import HTTPException
 
 router = APIRouter()
 
@@ -14,12 +14,12 @@ def explain_code(data: CodeRequest):
     result = analyze_code(data.code, data.language)
 
     document = {
-        "user_id": "demo_user",  # temporary
+        "user_id": data.user_id,
         "code": data.code,
         "explanation": result["explanation"],
         "errors": result["errors"],
         "suggestions": result["suggestions"],
-        "created_at": datetime.utcnow()
+        "created_at": datetime.now(timezone.utc)
     }
 
     explanations_collection.insert_one(document)
@@ -36,8 +36,12 @@ def get_history(user_id: str):
 
     return history
 
-from app.database.connection import users_collection
-from fastapi import HTTPException
+@router.delete("/history/{user_id}")
+def clear_history(user_id: str):
+    explanations_collection.delete_many({"user_id": user_id})
+    return {"message": "History cleared"}
+
+
 
 @router.post("/register")
 def register_user(user: UserRegister):
@@ -53,3 +57,11 @@ def register_user(user: UserRegister):
     })
 
     return {"message": "User registered successfully"}
+
+@router.post("/login")
+def login_user(user: UserLogin):
+    existing_user = users_collection.find_one({"email": user.email, "password": user.password})
+    if not existing_user:
+        raise HTTPException(status_code=401, detail="Invalid email or password")
+    
+    return {"message": "Login successful", "user_id": str(existing_user["_id"])}

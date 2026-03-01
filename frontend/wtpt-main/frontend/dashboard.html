@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CodeInsight Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<script>
+    if (!sessionStorage.getItem("user_id")) {
+        window.location.href = "login.html";
+    }
+</script>
+
+<header>
+    <h2> Explain My Code</h2>
+
+    <select id="language">
+        <option>C</option>
+        <option>C++</option>
+        <option>Java</option>
+        <option>Python</option>
+        <option>JavaScript</option>
+    </select>
+
+    <div>
+        <button onclick="goHistory()">History</button>
+        <button onclick="logout()">Logout</button>
+    </div>
+</header>
+
+<div class="main">
+    <textarea id="codeBox" placeholder="Write your code here..."></textarea>
+
+    <div class="btn-group">
+        <button onclick="explain()">Explain Code</button>
+        <button onclick="checkErrors()">Check Errors</button>
+    </div>
+
+    <div class="result">
+        <h3>Explanation</h3>
+        <pre id="explainResult"></pre>
+
+        <h3>Errors</h3>
+        <pre id="errorResult"></pre>
+    </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
