@@ -1,0 +1,52 @@
+[33mcommit 8206bf6c61a85a85f129f93e41be4c98383ec492[m[33m ([m[1;36mHEAD[m[33m)[m
+Author: bukkerohithmarthandanaik <naikrohit039@gmail.com>
+Date:   Sun Mar 1 19:15:18 2026 +0530
+
+    updated with geminiapi key
+
+[33mcommit 565afb4e0b724175912700d6baf9cb654f13a82f[m[33m ([m[1;31morigin/master[m[33m)[m
+Merge: 1f331fa 5c20e38
+Author: Rohith20057 <r220468@rguktrkv.ac.in>
+Date:   Sun Mar 1 18:42:46 2026 +0530
+
+    Merge pull request #1 from Rohith20057/update_1
+    
+    updated_1
+
+[33mcommit 2e7b54a25a812604617a82168a6cb30632e0c08f[m
+Author: bukkerohithmarthandanaik <naikrohit039@gmail.com>
+Date:   Sun Mar 1 13:11:26 2026 +0530
+
+    Revert "hello"
+    
+    This reverts commit 93c9c3248edfaf79c1473942daf6882df6cada6c.
+
+[33mcommit 74752d2454802e3cf3de190d2ee290c576ca974b[m
+Author: bukkerohithmarthandanaik <naikrohit039@gmail.com>
+Date:   Sun Mar 1 13:10:09 2026 +0530
+
+    Error
+
+[33mcommit 93c9c3248edfaf79c1473942daf6882df6cada6c[m
+Author: bukkerohithmarthandanaik <naikrohit039@gmail.com>
+Date:   Sun Mar 1 13:06:04 2026 +0530
+
+    hello
+
+[33mcommit fc013aa0e2ee07d937fc2d38344461e56366fa7c[m[33m ([m[1;32mupdate_1[m[33m)[m
+Author: bukkerohithmarthandanaik <naikrohit039@gmail.com>
+Date:   Sun Mar 1 12:54:33 2026 +0530
+
+    sample
+
+[33mcommit 5c20e38da72120d613cf4bcca16fc33e725e0fe6[m[33m ([m[1;31morigin/update_1[m[33m)[m
+Author: bukkerohithmarthandanaik <naikrohit039@gmail.com>
+Date:   Sun Mar 1 12:46:15 2026 +0530
+
+    updated_1
+
+[33mcommit 1f331fa230af010adbe06873c8fcceb8bcfb0e64[m[33m ([m[1;32mmaster[m[33m, [m[1;32mfrontend[m[33m)[m
+Author: bukkerohithmarthandanaik <naikrohit039@gmail.com>
+Date:   Mon Feb 23 14:12:10 2026 +0530
+
+    initally backend added

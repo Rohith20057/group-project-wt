@@ -1,6 +1,6 @@
 def detect_errors(lines):
     errors = []
-
+    print("Hello")
     for i, line in enumerate(lines):
         line = line.strip()
         
