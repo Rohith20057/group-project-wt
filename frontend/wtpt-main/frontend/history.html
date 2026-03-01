@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Code History</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <script>
+        if (!sessionStorage.getItem("user_id")) {
+            window.location.href = "login.html";
+        }
+    </script>
+
+    <header>
+        <h2>🕘 Code History</h2>
+        <div>
+            <button onclick="backDashboard()">Back</button>
+            <button onclick="logout()">Logout</button>
+        </div>
+    </header>
+
+    <div class="main">
+
+        <div class="controls">
+            <input type="text" id="searchInput" placeholder="Search..." onkeyup="searchHistory()">
+
+            <button onclick="clearAllHistory()">Clear All</button>
+        </div>
+
+        <div id="historyContainer"></div>
+
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>

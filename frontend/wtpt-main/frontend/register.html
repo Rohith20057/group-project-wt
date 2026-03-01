@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Register</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="auth-bg">
+    <div class="card glass">
+        <h2>📝 Register</h2>
+        <input type="text" id="regName" placeholder="Full Name">
+        <input type="email" id="regEmail" placeholder="example@gmail.com" pattern="[a-zA-Z0-9._%+-]+@gmail\.com"
+            title="Email must end with @gmail.com">
+        <input type="password" id="regPassword" placeholder="Password (uppercase, lowercase, number, min 6 char)">
+        <button onclick="register()">Register</button>
+        <p>Already have account? <a href="login.html">Login</a></p>
+        <p id="regMsg" class="msg"></p>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>
